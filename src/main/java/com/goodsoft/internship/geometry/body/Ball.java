@@ -1,15 +1,18 @@
 package com.goodsoft.internship.geometry.body;
 
-public class Ball extends Body {
-    private double r;
+import java.math.BigDecimal;
 
-    public Ball(double radius) {
+public class Ball extends Body {
+
+    private BigDecimal r;
+
+    public Ball(BigDecimal radius) {
         super("шар");
         this.r = radius;
     }
 
     @Override
-    public double getVolume() {
-        return (4.0 / 3) * Math.PI * Math.pow(r, 3);
+    public BigDecimal getVolume() {
+        return BigDecimal.valueOf((4.0 / 3) * Math.PI).multiply((r.pow(3, MATH_CONTEXT)));
     }
 }

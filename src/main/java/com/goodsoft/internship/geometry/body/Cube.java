@@ -1,15 +1,18 @@
 package com.goodsoft.internship.geometry.body;
 
-public class Cube extends Body {
-    private double a;
+import java.math.BigDecimal;
 
-    public Cube(double edge) {
+public class Cube extends Body {
+
+    private BigDecimal a;
+
+    public Cube(BigDecimal edge) {
         super("куб");
         this.a = edge;
     }
 
     @Override
-    public double getVolume() {
-        return Math.pow(a, 3);
+    public BigDecimal getVolume() {
+        return a.pow(3, MATH_CONTEXT);
     }
 }

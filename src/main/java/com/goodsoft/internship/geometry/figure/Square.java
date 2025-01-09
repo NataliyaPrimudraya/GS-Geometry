@@ -1,15 +1,18 @@
 package com.goodsoft.internship.geometry.figure;
 
-public class Square extends Figure {
-    private double a;
+import java.math.BigDecimal;
 
-    public Square(double side) {
+public class Square extends Figure {
+
+    private BigDecimal a;
+
+    public Square(BigDecimal side) {
         super("квадрат");
         this.a = side;
     }
 
     @Override
-    public double getArea() {
-        return a * a;
+    public BigDecimal getArea() {
+        return a.pow(2, MATH_CONTEXT);
     }
 }

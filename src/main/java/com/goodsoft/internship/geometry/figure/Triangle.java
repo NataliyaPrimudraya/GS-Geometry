@@ -1,11 +1,14 @@
 package com.goodsoft.internship.geometry.figure;
 
-public class Triangle extends Figure {
-    private double a;
-    private double b;
-    private double c;
+import java.math.BigDecimal;
 
-    public Triangle(double a, double b, double c) {
+public class Triangle extends Figure {
+
+    private BigDecimal a;
+    private BigDecimal b;
+    private BigDecimal c;
+
+    public Triangle(BigDecimal a, BigDecimal b, BigDecimal c) {
         super("треугольник");
         this.a = a;
         this.b = b;
@@ -13,8 +16,8 @@ public class Triangle extends Figure {
     }
 
     @Override
-    public double getArea() {
-        double s = (a + b + c) / 2;
-        return Math.sqrt(s * (s - a) * (s - b) * (s - c));
+    public BigDecimal getArea() {
+        BigDecimal s = (a.add(b).add(c)).divide(BigDecimal.valueOf(2), MATH_CONTEXT);
+        return (s.multiply(s.subtract(a)).multiply(s.subtract(b)).multiply(s.subtract(c))).sqrt(MATH_CONTEXT);
     }
 }

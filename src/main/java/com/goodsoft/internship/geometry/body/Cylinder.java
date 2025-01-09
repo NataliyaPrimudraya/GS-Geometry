@@ -1,17 +1,20 @@
 package com.goodsoft.internship.geometry.body;
 
-public class Cylinder extends Body {
-    private double r;
-    private double h;
+import java.math.BigDecimal;
 
-    public Cylinder(double radius, double height) {
+public class Cylinder extends Body {
+
+    private BigDecimal r;
+    private BigDecimal h;
+
+    public Cylinder(BigDecimal radius, BigDecimal height) {
         super("цилиндр");
         this.r = radius;
         this.h = height;
     }
 
     @Override
-    public double getVolume() {
-        return Math.PI * Math.pow(r, 2) * h;
+    public BigDecimal getVolume() {
+        return BigDecimal.valueOf(Math.PI).multiply(r.pow(2)).multiply(h, MATH_CONTEXT);
     }
 }

@@ -1,11 +1,14 @@
 package com.goodsoft.internship.geometry.figure;
 
-public class Trapezoid extends Figure {
-    private double a;
-    private double b;
-    private double h;
+import java.math.BigDecimal;
 
-    public Trapezoid(double baseA, double baseB, double height) {
+public class Trapezoid extends Figure {
+
+    private BigDecimal a;
+    private BigDecimal b;
+    private BigDecimal h;
+
+    public Trapezoid(BigDecimal baseA, BigDecimal baseB, BigDecimal height) {
         super("трапеция");
         this.a = baseA;
         this.b = baseB;
@@ -13,7 +16,7 @@ public class Trapezoid extends Figure {
     }
 
     @Override
-    public double getArea() {
-        return ((a + b) / 2) * h;
+    public BigDecimal getArea() {
+        return ((a.add(b)).divide(BigDecimal.valueOf(2), MATH_CONTEXT)).multiply(h, MATH_CONTEXT);
     }
 }
