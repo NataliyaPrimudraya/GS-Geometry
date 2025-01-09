@@ -13,7 +13,7 @@ public class Trapezoid extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         return ((a + b) / 2) * h;
     }
 }

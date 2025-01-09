@@ -9,7 +9,7 @@ public class Cube extends Body {
     }
 
     @Override
-    public double volume() {
+    public double getVolume() {
         return Math.pow(a, 3);
     }
 }

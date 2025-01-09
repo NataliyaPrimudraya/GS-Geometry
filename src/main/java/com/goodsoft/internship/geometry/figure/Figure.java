@@ -10,10 +10,10 @@ abstract public class Figure implements Printable {
         this.name = name;
     }
 
-    public abstract double area();
+    public abstract double getArea();
 
     @Override
     public void print() {
-        System.out.println("Это " + this.name + " площадью " + this.area());
+        System.out.println("Это " + this.name + " площадью " + this.getArea());
     }
 }

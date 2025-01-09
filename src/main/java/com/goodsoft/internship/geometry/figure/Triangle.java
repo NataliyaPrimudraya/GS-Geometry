@@ -13,7 +13,7 @@ public class Triangle extends Figure {
     }
 
     @Override
-    public double area() {
+    public double getArea() {
         double s = (a + b + c) / 2;
         return Math.sqrt(s * (s - a) * (s - b) * (s - c));
     }

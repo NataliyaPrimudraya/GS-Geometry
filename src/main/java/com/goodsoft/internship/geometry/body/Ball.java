@@ -9,7 +9,7 @@ public class Ball extends Body {
     }
 
     @Override
-    public double volume() {
+    public double getVolume() {
         return (4.0 / 3) * Math.PI * Math.pow(r, 3);
     }
 }

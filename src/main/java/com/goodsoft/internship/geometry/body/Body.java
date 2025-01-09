@@ -10,10 +10,10 @@ abstract class Body implements Printable {
         this.name = name;
     }
 
-    public abstract double volume();
+    public abstract double getVolume();
 
     @Override
     public void print() {
-        System.out.println("Это " + name + " объёмом " + this.volume());
+        System.out.println("Это " + name + " объёмом " + this.getVolume());
     }
 }

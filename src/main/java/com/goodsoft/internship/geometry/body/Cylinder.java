@@ -11,7 +11,7 @@ public class Cylinder extends Body {
     }
 
     @Override
-    public double volume() {
+    public double getVolume() {
         return Math.PI * Math.pow(r, 2) * h;
     }
 }
